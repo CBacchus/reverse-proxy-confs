@@ -1,6 +1,8 @@
-## Version 2023/02/05
+## Version 2026/06/26
 # make sure that your pihole container is named pihole
-# pihole does not require a base url setting
+# pihole before v6 does not require a base url setting
+# pihole v6+ needs to ensure the webserver.paths.prefix setting is set to /pihole 
+# this can be configured directly in the web ui or in the pihole.toml file
 
 location /pihole {
     return 301 $scheme://$host/pihole/;
